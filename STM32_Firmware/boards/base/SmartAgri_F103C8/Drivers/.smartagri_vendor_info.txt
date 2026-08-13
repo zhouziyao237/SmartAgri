@@ -1,0 +1,2 @@
+Source repository: D:/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.6
+Copied at CMake configure time. Build uses only board-local paths.

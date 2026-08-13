@@ -1,0 +1,5 @@
+﻿# Run on BOTH ESPs after serial-only test passes.
+AT+TESTMODE=0
+AT+SERIALMODE=FRAME
+AT+SAVE
+AT+APPLY

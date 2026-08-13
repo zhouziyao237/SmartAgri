@@ -1,0 +1,11 @@
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+
+set(ARM_GCC_ROOT "D:/GCC-ENV/Arm-GCC/11.2 2022.02" CACHE PATH "Arm GNU Toolchain root")
+set(_BIN "${ARM_GCC_ROOT}/bin")
+set(CMAKE_C_COMPILER   "${_BIN}/arm-none-eabi-gcc.exe" CACHE FILEPATH "" FORCE)
+set(CMAKE_ASM_COMPILER "${_BIN}/arm-none-eabi-gcc.exe" CACHE FILEPATH "" FORCE)
+set(CMAKE_CXX_COMPILER "${_BIN}/arm-none-eabi-g++.exe" CACHE FILEPATH "" FORCE)
+set(CMAKE_OBJCOPY      "${_BIN}/arm-none-eabi-objcopy.exe" CACHE FILEPATH "" FORCE)
+set(CMAKE_SIZE         "${_BIN}/arm-none-eabi-size.exe" CACHE FILEPATH "" FORCE)

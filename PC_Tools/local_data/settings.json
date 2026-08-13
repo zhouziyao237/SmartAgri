@@ -1,0 +1,12 @@
+{
+  "preferred_port": "COM12",
+  "baud": 115200,
+  "scan_interval_sec": 2.0,
+  "master_probe_interval_sec": 3.0,
+  "node_offline_timeout_sec": 15.0,
+  "node_hide_timeout_sec": 60.0,
+  "event_limit": 500,
+  "history_limit": 300,
+  "auto_open_browser": true,
+  "show_offline_nodes": false
+}

@@ -1,0 +1,12 @@
+SmartAgri V2.4.8 zero-touch SLAVE deployment
+
+Normal deployment no longer requires AT+GATEWAY.
+A configured SLAVE with GATEWAY=CLEAR, AUTODISCOVERY=1, CHANNELSCAN=1 will:
+1. Broadcast LINK_HELLO to FF:FF:FF:FF:FF:FF.
+2. Scan Wi-Fi channels 1..13 until it receives LINK_ACK.
+3. Learn and persist MASTER MAC + actual channel.
+4. Use unicast for normal traffic after binding.
+
+A factory UNCONFIGURED V2.4.8 ESP also starts ESP-NOW with a deterministic provisional Device ID.
+A V2.4.8 MASTER advertises that provisional node to the PC so Web can remotely set Role/Device/Network/Group.
+AT remains available for service/recovery only.

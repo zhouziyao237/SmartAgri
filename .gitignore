@@ -1,0 +1,84 @@
+# ============================================================
+# SmartAgri Git Ignore
+# ============================================================
+
+# ----------------------------
+# Build directories
+# ----------------------------
+build/
+**/build/
+
+out/
+**/out/
+
+dist/
+**/dist/
+
+cmake-build-*/
+**/cmake-build-*/
+
+Debug/
+Release/
+
+# ----------------------------
+# CMake generated
+# ----------------------------
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+
+# ----------------------------
+# ESP-IDF generated
+# ----------------------------
+ESP_Firmware/build/
+ESP_Firmware/sdkconfig.old
+
+# Keep sdkconfig / sdkconfig.defaults if used for reproducible builds
+
+# ----------------------------
+# STM32 build outputs
+# ----------------------------
+STM32_Firmware/build/
+STM32_Firmware/**/build/
+
+# ----------------------------
+# Python virtual environments
+# ----------------------------
+venv/
+.venv/
+env/
+ENV/
+
+**/venv/
+**/.venv/
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+
+# ----------------------------
+# IDE
+# ----------------------------
+.idea/
+.vscode/
+
+# ----------------------------
+# OS temporary files
+# ----------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----------------------------
+# Temporary files / logs
+# ----------------------------
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp

@@ -1,0 +1,14 @@
+SmartAgri V2.1.8b SERIAL + ESP-NOW QUICK TEST
+
+1) Flash C3 and ESP32.
+2) Open each board's onboard USB COM at 115200 8N1, CRLF.
+3) Send: AT, AT+GMR, AT+PINS?, AT+STATUS?, AT+MAC?
+4) Configure Classic ESP32 as MASTER device 1, network/group 1, channel 6, TESTMODE=1.
+5) Record MASTER AT+MAC?.
+6) Configure C3 as SLAVE device 1001 with AT+GATEWAY=MASTER_MAC, same network/group/channel, TESTMODE=1.
+7) MASTER should see +LINKRX:HELLO,SRC=1001 about every 5s.
+8) C3: AT+TESTSEND="C3_TO_ESP32"; MASTER should see +TESTRX.
+9) MASTER: AT+TESTSEND="ESP32_TO_C3"; C3 should see +TESTRX.
+10) Before STM32 integration set TESTMODE=0, SAVE/APPLY.
+
+C3 STM32 business pins are GPIO7 TX / GPIO6 RX @921600. GPIO21/20 stay UART0 Debug/AT.

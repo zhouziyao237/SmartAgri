@@ -1,0 +1,30 @@
+SmartAgri V2.4.6 host/static validation
+Date: 2026-08-12
+
+[1] Regression scripts
+CONFIG AUTHORITY REGRESSION PASS
+OTA SESSION CODEC PASS
+PC LOCAL LINK REGRESSION PASS
+STM32 TX GATE REGRESSION PASS
+UART/ROUTER V2.4.6 REGRESSION PASS
+
+[2] JavaScript syntax
+JS SYNTAX PASS
+
+[3] STM32/ESP protocol source equality
+PROTOCOL SOURCE EQUALITY PASS
+
+[4] Host protocol codec compile/run
+PASS
+PASS
+HOST PROTOCOL PASS
+
+[5] ESP core syntax - both target macro paths
+ESP esp32 CORE SYNTAX PASS
+ESP c3 CORE SYNTAX PASS
+
+[6] STM32 node service syntax with lightweight HAL stub
+STM32 NODE SERVICE SYNTAX PASS
+
+[7] Embedded cross-build limitation
+NOT RUN: arm-none-eabi-gcc / ESP-IDF Xtensa/RISC-V target build is unavailable in this Linux runtime.

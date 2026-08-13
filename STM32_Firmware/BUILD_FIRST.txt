@@ -1,0 +1,7 @@
+V2.4.7 source package intentionally does not ship stale V2.4.6 CMake build outputs.
+Configure/build with the existing CLion/ARM GCC profile, then build targets:
+  smart_agri_bootloader
+  smart_agri_comm
+  smart_agri_ota_bundle
+First install uses scripts\windows\flash_ota_bundle.ps1 with your build directory.
+The App remains linked at 0x08002000.

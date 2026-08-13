@@ -1,0 +1,37 @@
+SmartAgri V2.2.0 wiring quick reference
+=======================================
+
+MASTER STM32 <-> Classic ESP32 MASTER
+-------------------------------------
+STM32 PA9  USART1_TX  -> ESP32 GPIO16 RX
+STM32 PA10 USART1_RX  <- ESP32 GPIO17 TX
+STM32 PB0  ESP_WAKE   -> ESP32 GPIO25
+STM32 PB1  ESP_READY  <- ESP32 GPIO26
+GND <-> GND
+UART = 921600 8N1
+
+MASTER STM32 <-> PC Web backend
+-------------------------------
+STM32 PA2 USART2_TX -> USB-TTL RX
+STM32 PA3 USART2_RX <- USB-TTL TX
+STM32 GND           -> USB-TTL GND
+UART = 115200 8N1
+Protocol = SmartAgri A5 binary route frames; NOT AT.
+PC backend auto-scans COM and identifies role=MASTER/device=1.
+
+SLAVE STM32 <-> ESP32-C3
+------------------------
+STM32 PA9  USART1_TX -> C3 GPIO6 RX
+STM32 PA10 USART1_RX <- C3 GPIO7 TX
+STM32 PB0  ESP_WAKE  -> C3 GPIO3
+STM32 PB1  ESP_READY <- C3 GPIO10
+GND <-> GND
+UART = 921600 8N1
+
+ESP debug/config maintenance ports
+----------------------------------
+ESP32-C3: UART0 GPIO21/20 @115200 through board USB-UART
+ESP32:    UART0 GPIO1/3   @115200 through board USB-UART
+
+Do not power ESP32/C3 from the STM32 minimum-board 3.3 V regulator.
+Use independent power and common ground.

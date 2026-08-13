@@ -1,0 +1,5 @@
+SmartAgri V2.4.8 ESP Discovery Race + Lost-Gateway Recovery Fix
+ESP FW: 0x00020408
+STM32 FW: 0x00020407 (unchanged from V2.4.7; no reflash required for this ESP-only fix)
+Route Protocol: 2
+Compatibility: ESP V2.4.8 remains Protocol-2 compatible with V2.4.2-V2.4.7 basic routing.

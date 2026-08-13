@@ -1,0 +1,4 @@
+# Classic ESP32 uses the normal UART0 console; SmartAgri business traffic is on UART2 GPIO17/16.
+CONFIG_ESP_CONSOLE_UART_DEFAULT=y
+
+CONFIG_BOOTLOADER_APP_ROLLBACK_ENABLE=y
